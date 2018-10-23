@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MapsViewController" id="BYZ-38-t0r" customClass="MapsViewController" customModule="Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="53O-nr-rfJ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="maw-Sn-5V3" customClass="GMSMapView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="maw-Sn-5V3" firstAttribute="top" secondItem="53O-nr-rfJ" secondAttribute="top" id="2OQ-Ay-00a"/>
+                                    <constraint firstItem="maw-Sn-5V3" firstAttribute="leading" secondItem="53O-nr-rfJ" secondAttribute="leading" id="P0b-VX-gdi"/>
+                                    <constraint firstAttribute="bottom" secondItem="maw-Sn-5V3" secondAttribute="bottom" id="YqM-aD-Mur"/>
+                                    <constraint firstAttribute="trailing" secondItem="maw-Sn-5V3" secondAttribute="trailing" id="caR-AM-8gM"/>
+                                </constraints>
+                            </view>
+                            <navigationBar alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTo-Ey-ejR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
+                                <items>
+                                    <navigationItem prompt=" " id="8d9-cA-EhN">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="F1q-O7-h9U">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="evF-aZ-BFJ">
+                                                <rect key="frame" x="16" y="41" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Logout"/>
+                                                <connections>
+                                                    <action selector="backToLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pC1-cs-PEn"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                        <rightBarButtonItems>
+                                            <barButtonItem style="plain" id="fNZ-6Q-J00">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="A9U-zj-Nuy">
+                                                    <rect key="frame" x="276" y="41" width="83" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Previous"/>
+                                                    <connections>
+                                                        <action selector="showLastAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xnN-mB-FjE"/>
+                                                    </connections>
+                                                </button>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" id="Fkf-EI-esa">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="h2l-sj-qIB">
+                                                    <rect key="frame" x="193" y="41" width="83" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Stop"/>
+                                                    <connections>
+                                                        <action selector="stopAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Il-9B-kGe"/>
+                                                    </connections>
+                                                </button>
+                                            </barButtonItem>
+                                            <barButtonItem title="Start" style="plain" id="j3P-MC-JfC">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eYo-j8-JGa">
+                                                    <rect key="frame" x="105" y="41" width="83" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Start"/>
+                                                    <connections>
+                                                        <action selector="beginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F4W-nR-kcp"/>
+                                                    </connections>
+                                                </button>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLg-OH-gNm">
+                                <rect key="frame" x="168" y="557" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="NQq-SI-hrC"/>
+                                    <constraint firstAttribute="width" constant="60" id="VbO-ed-rve"/>
+                                </constraints>
+                                <state key="normal" title="Selfie" image="icon"/>
+                                <connections>
+                                    <action selector="takeSelfie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Arx-qa-3o7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="53O-nr-rfJ" secondAttribute="trailing" id="1h4-Mf-Zar"/>
+                            <constraint firstItem="bTo-Ey-ejR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7YZ-PA-k1v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kLg-OH-gNm" secondAttribute="bottom" constant="50" id="ATC-x1-P9h"/>
+                            <constraint firstItem="53O-nr-rfJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="a5W-zo-JfA"/>
+                            <constraint firstItem="53O-nr-rfJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="d0a-on-L9S"/>
+                            <constraint firstItem="kLg-OH-gNm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="168" id="fsR-Fk-ghP"/>
+                            <constraint firstItem="bTo-Ey-ejR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nDB-sD-Oeo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="53O-nr-rfJ" secondAttribute="bottom" id="s1i-Kb-f4E"/>
+                            <constraint firstAttribute="trailing" secondItem="bTo-Ey-ejR" secondAttribute="trailing" id="s25-ZW-tda"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Y01-vc-Pp0">
+                        <nil key="title"/>
+                        <leftBarButtonItems>
+                            <barButtonItem title="Начать трек" style="plain" id="2nD-fr-Uga">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MIb-WM-eHD">
+                                    <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Начать "/>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="dwU-Ac-4Rb">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="K5k-0h-LWp">
+                                    <rect key="frame" x="107" y="7" width="83" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Закончить "/>
+                                </button>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bbZ-rX-ca1">
+                            <rect key="frame" x="196" y="7" width="46" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Выход"/>
+                        </button>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="2oZ-4u-EyF">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FM1-pA-6Fs">
+                                <rect key="frame" x="264" y="7" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Предыдущий"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="maw-Sn-5V3" id="wmK-F9-9yH"/>
+                        <outlet property="photoIcon" destination="kLg-OH-gNm" id="vjU-Q1-Wl5"/>
+                        <outlet property="router" destination="tNJ-sP-jLI" id="Aou-UM-t2j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="tNJ-sP-jLI" customClass="MainRouter" customModule="Tracker" customModuleProvider="target">
+                    <connections>
+                        <outlet property="controller" destination="BYZ-38-t0r" id="8PF-IY-Mra"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="992.79999999999995" y="26.53673163418291"/>
+        </scene>
+        <!--Selfie Controller-->
+        <scene sceneID="hSV-BL-vTY">
+            <objects>
+                <viewController id="ujw-Ci-1Gx" customClass="SelfieController" customModule="Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mFU-Q6-cKj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wnp-tu-kJQ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wnp-tu-kJQ" firstAttribute="leading" secondItem="I4T-ca-dvS" secondAttribute="leading" id="L5e-yn-zi4"/>
+                            <constraint firstItem="Wnp-tu-kJQ" firstAttribute="top" secondItem="I4T-ca-dvS" secondAttribute="top" id="qDG-1E-2S9"/>
+                            <constraint firstItem="I4T-ca-dvS" firstAttribute="trailing" secondItem="Wnp-tu-kJQ" secondAttribute="trailing" id="vrz-3r-nVh"/>
+                            <constraint firstItem="I4T-ca-dvS" firstAttribute="bottom" secondItem="Wnp-tu-kJQ" secondAttribute="bottom" id="xJ9-ml-ZTP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="I4T-ca-dvS"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Wnp-tu-kJQ" id="9Hy-Xj-gea"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vr0-3D-4a8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1913" y="12"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon" width="512" height="512"/>
+    </resources>
+</document>
